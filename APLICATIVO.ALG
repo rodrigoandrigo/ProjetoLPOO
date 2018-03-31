@@ -7,12 +7,12 @@ Algoritmo "Aplicativo"
 // Data atual  : 27/03/2018
 Var
 // Aqui estão todas as variaveis que usei neste programa
- n1,n2,n3,n4,n5,n6,soma,diferen:inteiro
- Media,result:real
- escolhas,contado:inteiro
- m,f,masculi,femin,s,idade:inteiro
- mediamaculin,mediafemin,mediaidade:inteiro
- x,y,z,p:inteiro
+n1,n2,n3,n4,n5,n6,soma,diferen:inteiro
+Media,result:real
+escolhas,contado:inteiro
+m,f,masculi,femin,s,idade:inteiro
+mediamaculin,mediafemin,mediaidade:inteiro
+x2,x,y,z,p:inteiro
 Inicio
     Enquanto (escolhas <> 7) faca
     Escreval("1 Realizar a soma de dois números")
@@ -56,33 +56,33 @@ Inicio
  //esse é o algoritmo da media das idades
  caso 4
  Escreval("Escreva a quantidade de pessoas + 1")
-   Escreval("Se for 6 pessoas escreva 7, se for 4 pessoas escreva 5")
-   Leia(s)
-   contado <- 1
+ Escreval("Se for 6 pessoas escreva 7, se for 4 pessoas escreva 5")
+ Leia(s)
+ contado <- 1
 
-   repita
-      Escreval("Escreva a sua idade")
-      Leia(idade)
-      Escreval("Escreva 1 para masculino")
-      Escreval("Escreva 2 para feminino")
-      Leia(sexo)
-      Se(sexo = 1)entao
-         m <- m + 1
-         masculi <- masculi + idade
-      fimse
-      Se(sexo = 2)entao
-         f <- f + 1
-         femin <- femin + idade
-      Fimse
-      contado <- contado + 1
-   ate(contado = s)
+ repita
+ Escreval("Escreva a sua idade")
+ Leia(idade)
+ Escreval("Escreva 1 para masculino")
+ Escreval("Escreva 2 para feminino")
+ Leia(sexo)
+ Se(sexo = 1)entao
+ m <- m + 1
+ masculi <- masculi + idade
+ Fimse
+ Se(sexo = 2)entao
+ f <- f + 1
+ femin <- femin + idade
+ Fimse
+ contado <- contado + 1
+ ate(contado = s)
 
-   mediamaculin <- masculi/m
-   mediafemin <- femin/f
-   mediaidade <- femin/masculi
-   escreval("A media total das idades é", mediaidade)
-   escreval("A media das idades masculinas é",mediamaculin)
-   escreval("A media das idades femininas é",mediafemin)
+ mediamaculin <- masculi/m
+ mediafemin <- femin/f
+ mediaidade <- femin/masculi
+ Escreval("A media total das idades é", mediaidade)
+ Escreval("A media das idades masculinas é",mediamaculin)
+ Escreval("A media das idades femininas é",mediafemin)
 
 // Aqui certamente voçe vera os numeros primos
  Caso 5
@@ -97,9 +97,16 @@ Inicio
  Fimpara
  Se(p=2)entao
  Escreva(x)
+ x2 <- x2 + x
  Fimse
-
  Fimpara
+ Escreval("A soma desses numeros primos é:",x2)
+ 
+ //Fim forçado
+ Caso 7
+ Fimescolha
+ Fimenquanto
+ Fimalgoritmo
  //esse é o fim da execuçao das opções
  Fimescolha
  Fimenquanto
