@@ -11,8 +11,12 @@ Var
  Media,result:real
  escolhas,contado:inteiro
  m,f,masculi,femin,s,idade:inteiro
- mediamaculin,mediafemin,mediaidade:inteiro
  x2,x,y,z,p:inteiro
+ sexo:caractere
+ mediamaculin,mediafemin,mediaidade,hem,dia:real
+ x2,x,y,z,p:inteiro
+ y1,y2:inteiro
+ y3:caractere
 Inicio
     Escreval("")
     Enquanto (escolhas <> 7) faca
@@ -88,8 +92,10 @@ Inicio
 
  mediamaculin <- masculi/m
  mediafemin <- femin/f
- mediaidade <- femin/masculi
- Escreval("A media total das idades é", mediaidade)
+ mediaidade <- femin + masculi
+ hem <- f + m
+ dia <- mediaidade/hem
+ Escreval("A media total das idades é", dia)
  Escreval("A media das idades masculinas é",mediamaculin)
  Escreval("A media das idades femininas é",mediafemin)
  Escreval("")
