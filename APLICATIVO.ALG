@@ -7,16 +7,19 @@ Algoritmo "Aplicativo"
 // Data atual  : 27/03/2018
 Var
 // Aqui estão todas as variaveis que usei neste programa
- n1,n2,n3,n4,n5,n6,soma,diferen:inteiro
- Media,result:real
- escolhas,contado:inteiro
- m,f,masculi,femin,s,idade:inteiro
- x2,x,y,z,p:inteiro
- sexo:caractere
- mediamaculin,mediafemin,mediaidade,hem,dia:real
- x2,x,y,z,p:inteiro
- y1,y2:inteiro
- y3:caractere
+   n1,n2,n3,n4,n5,n6,soma,diferen:inteiro
+   Media,result:real
+   escolhas,contado:inteiro
+   m,f,masculi,femin,s,idade:inteiro
+   x2,x,y,z,p:inteiro
+   sexo:caractere
+   mediamaculin,mediafemin,mediaidade,hem,dia:real
+   x2,x,y,z,p:inteiro
+   y1,y2:inteiro
+   y3:caractere
+   q,q2,herm:inteiro
+   z1,z2,z3,z4,z5,z6,z7,z8:inteiro
+   bi:Real
 Inicio
     Escreval("")
     Enquanto (escolhas <> 7) faca
@@ -123,22 +126,48 @@ Inicio
 
  //Aqui é feito a conversão de binario para decima e decimal para binario
  Caso 6
- Escreval("")
- 
- Escreval("Escreva um número um número")
-      leia(y1)
-      y2 <- y1
-      enquanto y1 > 0 faca
-      se (y1 mod 2) = 0 entao
-      y3 <- "0" + y3
-      senao
-      y3 <- "1" + y3
-      fimse
-      y1 <- y1 div 2
-fimenquanto
-escreval("A Conversão do numero decimal", y2, ",para número binario é ", y3)
+   Escreval("")
+   Escreval("Escreva a quantidade de vezes que quer repetir o processo")
+   Leia(q)
+   q2 <- 1
+   Repita
+      Escreval("")
+      Escreval("Escreva 1 para decimal")
+      Escreval("Escreva 2 para binario")
+      Leia(herm)
+      Escolha herm
+         Escreval("")
 
- Escreval("")
+      Caso 1
+         Escreval("")
+         Escreval("Escreva um número decimal")
+         Leia(y1)
+         y2 <- y1
+         Enquanto y1 > 0 faca
+            Se (y1 mod 2) = 0 entao
+               y3 <- "0" + y3
+            Senao
+               y3 <- "1" + y3
+            Fimse
+            y1 <- y1 div 2
+         Fimenquanto
+         Escreval("A Conversão do numero decimal", y2, ",para número binario é ", y3)
+         Escreval("")
+
+      Caso 2
+         Escreval("")
+         Escreval("Escreva um número binario")
+         Escreval("Escreva um número de cada vez")
+         Escreval("Um número binario é composto por 1 e 0")
+         Escreval("Voce pode escrever um binario de até 8 numeros")
+         Leia(z1,z2,z3,z4,z5,z6,z7,z8)
+         bi <- (z8*1)+(z7*2)+(z6*4)+(z5*8)+(z4*16)+(z3*32)+(z2*64)+(z1*128)
+         Escreval("A Conversão do numero binario", z1,z2,z3,z4,z5,z6,z7,z8)
+         Escreval("para número decimal é ", bi)
+      Fimescolha
+      q2 <- q2 + 1
+   ate(q2 > q)
+   Escreval("")
  
  //Fim forçado
  Caso 7
